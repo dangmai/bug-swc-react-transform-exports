@@ -1,0 +1,19 @@
+{
+  "$schema": "https://swc.rs/schema.json",
+  "module": {
+    "type": "commonjs"
+  },
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true
+    },
+    "experimental": {
+      // Without this plugin, we won't be able to use `jest.spyOn` on
+      // imported modules (because ES modules are immutable).
+      // See this issue: https://github.com/swc-project/swc/discussions/7024
+      "plugins": [["swc_mut_cjs_exports", {}]]
+    }
+  },
+  "minify": false
+}
