@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:fail": "jest build/src/fail.test.js",
-    "test:pass": "jest build/src/pass.test.js",
+    "test:fail": "jest src/fail.test.js",
+    "test:pass": "jest src/pass.test.js",
     "build": "rm -rf build && swc -d build ./src/"
   },
   "keywords": [],
